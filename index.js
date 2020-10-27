@@ -47,10 +47,29 @@ function processFirstItem(stringList, callback) {
  * 
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
+ *
 */
-function processLength(/* CODE HERE */) {
-  /* CODE HERE */
-}
+
+
+
+
+function processLength(numbersArray, num) 
+{
+  
+  let workingArray = numbersArray;
+
+  function callback() 
+  {
+    console.log(workingArray.length + num);
+  };
+  return callback();
+
+};
+
+processLength([1, 2, 3, 4, 5], 1000);
+
+
+
 
 /**
  * ### Challenge `processLastItem`
@@ -65,10 +84,29 @@ function processLength(/* CODE HERE */) {
  * Example of usage of this higher-order function:
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
+ * 
 */
-function processLastItem(/* CODE HERE */) {
-  /* CODE HERE */
+
+
+
+
+function processLastItem(stringList) //takes in an parameter stringList from functionCall(argument)
+{    // takes in stringList and function callback()
+  const workingVariable = stringList; //creates workingVariable when function is called
+
+    function callback() // nested callback function
+    {
+        return workingVariable.pop(); //pops last item from passed string array
+    }
+
+  return callback(); //returns value to processLastItem
+
 }
+
+console.log(processLastItem(['art', 'science', 'math'])) //calls function and console logs the result. 
+
+
+
 
 /**
  * ### Challenge `processSum`
@@ -88,9 +126,24 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `-5`, '-1', and `(num) => num + 1000`,
  * should return 994.
 */
-function processSum(/* CODE HERE */) {
-  /* CODE HERE */
+
+
+
+
+function processSum(num1, num2) 
+{
+
+  function callback() 
+  {
+    return `${num1 + num2} is a big number!`;
+  }
+  return callback()
 }
+
+console.log(processSum(20, 30));
+
+
+
 
 /**
  * ### Challenge `processProduct`
@@ -110,9 +163,24 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+
+
+
+
+function processProduct(num1, num2) 
+{
+
+  function callback() 
+  {
+    return `${num1 * num2} is a big number!`;
+  }
+  return callback()
 }
+
+console.log(processProduct(20, 30));
+
+
+
 
 /**
  * ### Challenge `processDuplicateFree`
