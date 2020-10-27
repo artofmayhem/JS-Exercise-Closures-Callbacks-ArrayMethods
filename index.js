@@ -223,9 +223,24 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * 
  * [2] Invoking `lowerCaseStrings` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function lowerCaseStrings(/* code here */) {
-  /* code here */
+
+
+
+
+function lowerCaseStrings(strings) 
+{
+  const workingStrings = strings;
+
+  workingStrings.forEach((lowCase) => {
+    console.log(lowCase.toLowerCase());
+   });
+
 }
+
+lowerCaseStrings(['Iphone 12 Max Pro', 'Ipad Air 3', 'Macbook Pro', 'Apple Watch', 'Airpods']);
+
+
+
 
 /**
  * ### Challenge `isItAnApple`
