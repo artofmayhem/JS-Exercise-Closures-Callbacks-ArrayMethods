@@ -61,7 +61,8 @@ function inning(){
      
 } 
 
-console.log(inning());
+//test code
+inning()
 console.log(inning());
 
 
@@ -87,6 +88,8 @@ awayTeam = (callback() * totalInnings);
     console.log(gameOver)
 };
 
+
+//test code
 finalScore(inning, 9)
 
 
@@ -133,6 +136,8 @@ for(let i = 1; i <= amountOfInnings; i++ )
 
 }
 
+
+// test code
 scoreboard(inning, 9)
 
 
