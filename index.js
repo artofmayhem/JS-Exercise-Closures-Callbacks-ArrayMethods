@@ -27,9 +27,9 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- *  counter1 is an example of closure whereby the variable let count is initialized withing the scope of the outer function counterMaker
+ *  counter2 is an example of closure whereby the variable let count is outside of the scope of the outer function counterMaker
  * 2. Which of the two uses a closure? How can you tell?
- * example 1
+ * example 2
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  * counter1 would be preferable if you wanted to protect the data stored inside of the function such as pay info etc. counter 2 would be preferable if you just neded a function run with no security for the data inside
 */
