@@ -52,7 +52,6 @@ function processFirstItem(stringList, callback) {
 
 
 
-
 function processLength(numbersArray, num) 
 {
   
@@ -66,9 +65,8 @@ function processLength(numbersArray, num)
 
 };
 
+
 processLength([1, 2, 3, 4, 5], 1000);
-
-
 
 
 /**
@@ -86,7 +84,6 @@ processLength([1, 2, 3, 4, 5], 1000);
  * should return 'barbar'.
  * 
 */
-
 
 
 
@@ -126,10 +123,6 @@ console.log(processLastItem(['art', 'science', 'math'])) //calls function and co
  * [2] Invoking `processSum` passing `-5`, '-1', and `(num) => num + 1000`,
  * should return 994.
 */
-
-
-
-
 function processSum(num1, num2) 
 {
 
@@ -141,10 +134,6 @@ function processSum(num1, num2)
 }
 
 console.log(processSum(20, 30));
-
-
-
-
 /**
  * ### Challenge `processProduct`
  * 
@@ -163,10 +152,6 @@ console.log(processSum(20, 30));
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-
-
-
-
 function processProduct(num1, num2) 
 {
 
@@ -178,9 +163,6 @@ function processProduct(num1, num2)
 }
 
 console.log(processProduct(20, 30));
-
-
-
 
 /**
  * ### Challenge `processDuplicateFree`
@@ -200,10 +182,16 @@ console.log(processProduct(20, 30));
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
-}
+function processDuplicateFree(array, callback) {
+  return callback
 
+  // loop through each one and test for equal
+}
+// TEST CODE
+var output = processDuplicateFree([1,1,1,2], (arr) => arr);
+console.log(output);  // should return [1,2]
+var output = processDuplicateFree([1,1,2,2,3], (arr) => arr.length);
+console.log(output);
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 
@@ -257,10 +245,26 @@ lowerCaseStrings(['Iphone 12 Max Pro', 'Ipad Air 3', 'Macbook Pro', 'Apple Watch
  * 
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+
+
+
+
+function isItAnApple(strings) {
+  let isAppleArray = [];
+  strings.forEach(element => {
+    if (element === "apple") {
+      isAppleArray.push(true);
+    } else {
+      isAppleArray.push(false);
+    }
+    })
+  return isAppleArray;
 }
 
+
+
+
+return arrayOfLowerCase;
 /**
  * ### Challenge `removeApple`
  * 
@@ -277,9 +281,22 @@ function isItAnApple(/* code here */) {
  * 
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function removeApple(/* code here */) {
-  /* code here */
+
+
+
+
+function removeApple(strings) {
+  let appleRemovedArray = [];
+  strings.forEach (element => {
+    if (element !== "apple") {
+      appleRemovedArray.push(element);
+    } 
+  })
+  return appleRemovedArray;
 }
+
+
+
 
 /**
  * ### Challenge `stringSmash`
@@ -296,9 +313,20 @@ function removeApple(/* code here */) {
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(/* code here */) {
-  /* code here */
+
+
+
+
+function stringSmash(strings) {
+  let comboString = "";
+  strings.forEach(element => {
+    comboString += element;
+  })
+  return comboString;
 }
+
+
+
 
 // A local community center is holding a fund raising 5k fun run and has invited
 // 50 small businesses to make a small donation on their behalf for some much needed
