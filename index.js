@@ -332,8 +332,6 @@ function stringSmash(strings) {
 // 50 small businesses to make a small donation on their behalf for some much needed
 // updates to their facilities. Each business has assigned a representative
 // to attend the event along with a small donation.
-
-/**
  * ### Challenge `getFullNames`
  * 
  * @instructions
@@ -343,9 +341,23 @@ function stringSmash(strings) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
-}
+
+
+
+function getFullNames(runners) {
+  let nameArray = runners.map(element => {
+    return `${element.last_name}, ${element.first_name}`;
+  })
+  return nameArray;
+};
+Test
+var output = getFullNames([ { id: 1, first_name: "Jesse", last_name: "Miller", email: "jmill@gmail.com", shirt_size: "XL", company_name: "Amazon", donation: 100 },
+{ id: 2, first_name: "John", last_name: "James", email: "jamsie@yahoo.com", shirt_size: "2XL", company_name: "WSJF", donation: 50 },
+]);
+console.log(output);  // should return array of names "Smith, John"
+
+
+
 
 /**
  * ### Challenge `firstNamesAllCaps`
@@ -359,27 +371,21 @@ function getFullNames(/* CODE HERE */) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
+
+
+
+
+function firstNamesAllCaps(runners) {
+  let firstNameCapsArray = runners.map(element => {
+    let firstName = element.first_name;
+    return firstName.toUpperCase();
+    })
+  return firstNameCapsArray;
 }
 
-/**
- * ### Challenge `getRunnersByTShirtSize`
- * * THIS IS A STRETCH PROBLEM! ATTEMPT ONLY AFTER COMPLETING ALL NON-STRETCH CHALLENGES!
- * 
- * @instructions
- * The event director needs a way to find the runners that need
- * a specific t-shirt size, so they can place the orders easily.
- * Implement this function using filter().
- * 
- * @param runners array of runners like the one inside the /data/runners.js file.
- * @param tShirtSize string (possible values are "S", "M", "L", "XL", "2XL", "3XL").
- * @returns an array containing only the runners that use the given `tShirtSize`.
- * The runners in the array appear in the same order they appear in the `runners` array.
-*/
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  /* CODE HERE */
-}
+
+
+
 
 /**
  * ### Challenge `tallyUpDonations`
