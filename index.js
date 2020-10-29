@@ -77,20 +77,25 @@ finalScore(inning, 9) might return:
 
 function finalScore(callback, totalInnings)
 {
-homeTeam = (callback() * totalInnings);
-awayTeam = (callback() * totalInnings);
-
-    const gameOver = 
+  let homeTeam = 0;
+  let awayTeam = 0;
+  for(let i = 0; i < totalInnings; i++)
+    {
+        homeTeam += inning();
+        awayTeam += inning();
+    };
+    
+   return gameOver = 
     {
         "Dodgers": homeTeam,
-        "Yankees": awayTeam,
-    }
-    console.log(gameOver)
+        "Yankees": awayTeam
+    };
+  
 };
 
 
 //test code
-finalScore(inning, 9)
+console.log(finalScore(inning, 9))
 
 
 
