@@ -57,7 +57,7 @@ Write a function called `inning` that generates a random number of points that a
 
 function inning(){
 
-     return Math.floor(Math.random() * 2) + 1;
+     return Math.floor(Math.random() * Math.floor(3));
      
 } 
 
