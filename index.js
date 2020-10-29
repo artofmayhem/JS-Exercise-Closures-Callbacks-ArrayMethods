@@ -127,7 +127,7 @@ for(let i = 1; i <= amountOfInnings; i++ )
 
     } else if (i === 3)
     {
-        console.log(`${i}nd inning: ${callback()} - ${callback()}`)
+        console.log(`${i}rd inning: ${callback()} - ${callback()}`)
     } else
     {
         console.log(`${i}th inning: ${callback()} - ${callback()}`)
