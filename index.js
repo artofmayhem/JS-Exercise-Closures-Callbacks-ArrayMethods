@@ -119,18 +119,18 @@ for(let i = 1; i <= amountOfInnings; i++ )
 {
     if (i === 1)
     {
-        console.log(`${i}st inning: ${callback()} - ${inning()}`)
+        console.log(`${i}st inning: ${callback()} - ${callback()}`)
 
     } else if (i === 2)
     {
-        console.log(`${i}nd inning: ${callback()} - ${inning()}`)
+        console.log(`${i}nd inning: ${callback()} - ${callback()}`)
 
     } else if (i === 3)
     {
-        console.log(`${i}nd inning: ${callback()} - ${inning()}`)
+        console.log(`${i}nd inning: ${callback()} - ${callback()}`)
     } else
     {
-        console.log(`${i}th inning: ${callback()} - ${inning()}`)
+        console.log(`${i}th inning: ${callback()} - ${callback()}`)
     }
 }
 
